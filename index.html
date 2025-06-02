@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Investigación Criminal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo Portal de Investigación Criminal" class="logo-image">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#inicio" class="active" data-nav="inicio">Inicio</a></li>
+                        <li><a href="#investigadores" data-nav="investigadores">Investigadores</a></li>
+                        <li><a href="#centro-recursos" data-nav="material">Centro de Recursos</a></li>
+                        <li><a href="#sugerencias" data-nav="sugerencias">Sugerencias</a></li>
+                    </ul>
+                    <div class="nav-indicator"></div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio" class="section-inicio">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1 class="hero-title">BIENVENIDO A LA C.I.A.P</h1>
+                    <p class="hero-subtitle"><strong>Agencia de Investigación Científica y Criminalística</strong></p>
+                    <p class="hero-description">Un espacio dedicado a profesionales e interesados en la investigación criminal</p>
+                    <a href="#centro-recursos" id="exploreButton" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #0f0045 0%, #2d3250 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; transition: all 0.4s ease; border: 2px solid rgba(255, 255, 255, 0.15); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(84, 101, 178, 0.5); text-transform: uppercase; font-size: 1.1rem;">Explorar Recursos <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    <script>
+                        document.getElementById('exploreButton').addEventListener('mouseover', function() {
+                            this.style.background = 'linear-gradient(135deg, #2d3250 0%, #5465b2 100%)';
+                            this.style.transform = 'translateY(-5px) scale(1.05)';
+                            this.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.4), 0 0 25px rgba(84, 101, 178, 0.8)';
+                            this.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                        });
+                        document.getElementById('exploreButton').addEventListener('mouseout', function() {
+                            this.style.background = 'linear-gradient(135deg, #0f0045 0%, #2d3250 100%)';
+                            this.style.transform = 'translateY(0) scale(1)';
+                            this.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(84, 101, 178, 0.5)';
+                            this.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+                        });
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Resto del contenido de la sección inicio -->
+            <!-- Sección de Misión y Visión -->
+            <section style="max-width: 1200px; margin: 3rem auto; padding: 0 1rem;">
+                <!-- Tarjeta de Misión -->
+                <div id="misionCard" style="display: flex; flex-direction: row; margin-bottom: 3rem; background: linear-gradient(135deg, #0f0045 0%, #2d3250 100%); border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(84, 101, 178, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.5), 0 15px 15px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(84, 101, 178, 0.5)'; this.style.borderColor='rgba(184, 193, 236, 0.3)'; document.getElementById('misionImg').style.transform='scale(1.05)'; document.getElementById('misionImg').style.filter='brightness(0.9) saturate(1.4)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(84, 101, 178, 0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; document.getElementById('misionImg').style.transform='scale(1)'; document.getElementById('misionImg').style.filter='brightness(0.8) saturate(1.2)';">
+                    <div style="flex: 1; padding: 3rem; display: flex; flex-direction: column; justify-content: center;">
+                        <h2 style="font-size: 2.5rem; color: #b8c1ec; margin-bottom: 1.5rem; position: relative; display: inline-block;">
+                            Nuestra Misión
+                            <span style="position: absolute; bottom: -10px; left: 0; width: 80px; height: 4px; background: linear-gradient(90deg, #5465b2, transparent); border-radius: 2px; display: block;"></span>
+                        </h2>
+                        <p style="font-size: 1.2rem; line-height: 1.8; color: #fff; max-width: 600px;">Proporcionar servicios de investigación criminal de alta calidad, utilizando tecnología avanzada y metodologías científicas para apoyar a profesionales del derecho, instituciones y particulares en la búsqueda de la verdad y la justicia.</p>
+                    </div>
+                    <div style="flex: 1; position: relative; overflow: hidden; min-height: 350px;">
+                        <img id="misionImg" src="img/Etica.jpg" alt="Ética en la Investigación Criminal" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) saturate(1.2); position: absolute; top: 0; left: 0; transition: transform 0.8s ease, filter 0.8s ease;"> 
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de Visión -->
+                <div id="visionCard" style="display: flex; flex-direction: row-reverse; margin-bottom: 3rem; background: linear-gradient(135deg, #0f0045 0%, #2d3250 100%); border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(84, 101, 178, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.5), 0 15px 15px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(84, 101, 178, 0.5)'; this.style.borderColor='rgba(184, 193, 236, 0.3)'; document.getElementById('visionImg').style.transform='scale(1.05)'; document.getElementById('visionImg').style.filter='brightness(0.9) saturate(1.4)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(84, 101, 178, 0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; document.getElementById('visionImg').style.transform='scale(1)'; document.getElementById('visionImg').style.filter='brightness(0.8) saturate(1.2)';">
+                    <div style="flex: 1; padding: 3rem; display: flex; flex-direction: column; justify-content: center;">
+                        <h2 style="font-size: 2.5rem; color: #b8c1ec; margin-bottom: 1.5rem; position: relative; display: inline-block;">
+                            Nuestra Visión
+                            <span style="position: absolute; bottom: -10px; left: 0; width: 80px; height: 4px; background: linear-gradient(90deg, #5465b2, transparent); border-radius: 2px; display: block;"></span>
+                        </h2>
+                        <p style="font-size: 1.2rem; line-height: 1.8; color: #fff; max-width: 600px;"><strong style="color: #b8c1ec; font-weight: 700;">Visión de aquí al año 2030:</strong> convertirnos en la primera empresa de investigación privada en brindar apoyo técnico-científico a los abogados defensores.</p>
+                    </div>
+                    <div style="flex: 1; position: relative; overflow: hidden; min-height: 350px;">
+                        <img id="visionImg" src="img/ed.jpg" alt="Visión de la Investigación Criminal" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) saturate(1.2); position: absolute; top: 0; left: 0; transition: transform 0.8s ease, filter 0.8s ease;"> 
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Por Qué Elegirnos -->
+            <section class="why-choose-us">
+                <div class="section-header">
+                    <h2>¿Por Qué Elegirnos?</h2>
+                    <p>Descubre las razones que nos hacen la mejor opción para profesionales de la investigación criminal</p>
+                </div>
+                
+                <div class="reasons-container">
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Experiencia y Profesionalismo</h3>
+                        <p>Contamos con peritos especializados en diversas áreas forenses, garantizando análisis precisos y confiables.</p>
+                    </div>
+                    
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Servicios Integrales</h3>
+                        <p>Ofrecemos peritajes en informática, balística, fotografía, explosivos, salud y psicología forense para atender todas tus necesidades.</p>
+                    </div>
+                    
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Seguridad e Investigación Judicial</h3>
+                        <p>Realizamos análisis de comunicaciones, estudios de seguridad, pruebas de polígrafo y análisis de riesgos para apoyar investigaciones.</p>
+                    </div>
+                    
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Apoyo Médico y Psicológico</h3>
+                        <p>Brindamos dictámenes médicos y psiquiátricos, así como evaluación psicológica y trabajo social, complementando nuestras investigaciones.</p>
+                    </div>
+                    
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Compromiso con la Justicia</h3>
+                        <p>Garantizamos imparcialidad, confidencialidad y uso de tecnología avanzada para obtener resultados efectivos y legales.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- SECCIÓN INVESTIGADORES -->
+        <section id="investigadores" class="section-investigadores">
+            <div class="page-header">
+                <h1>Nuestros Investigadores</h1>
+                <p style="color: white;">Conoce a los profesionales que forman parte de nuestro equipo de investigación criminal</p>
+            </div>
+            
+            <section class="investigators-grid">
+                <div class="investigator-card">
+                    <div class="investigator-image-container">
+                        <img src="img/Investigador 1.jpg" alt="James Fernandez Leal" class="investigator-image">
+                    </div>
+                    <div class="investigator-info">
+                        <h2>James Fernández Leal</h2>
+                        <p class="investigator-title">Investigador Principal</p>
+                        <p class="investigator-contact"><i class="fas fa-phone"></i> Tel: +57 310 4787881</p>
+                        <p class="investigator-description">Técnico criminalístico con más de 20 años de experiencia en investigación criminal y policía judicial, desempeñando labores en el análisis de la escena del crimen, recolección de evidencias, elaboración de informes periciales y apoyo técnico en procesos judiciales.</p>
+                    </div>
+                </div>
+                
+                <div class="investigator-card">
+                    <div class="investigator-image-container">
+                        <img src="img/Investigador 2.jpeg" alt="José Andrés Hernández" class="investigator-image">
+                    </div>
+                    <div class="investigator-info">
+                        <h2>José Andrés Hernández</h2>
+                        <p class="investigator-title">Investigador Senior</p>
+                        <p class="investigator-contact"><i class="fas fa-phone"></i> Tel: +57 323 3258043</p>
+                        <p class="investigator-description">Un investigador judicial y abogado que también es psicólogo combina técnicas forenses con el análisis del comportamiento humano. Su doble formación le permite entender mejor a víctimas y sospechosos, evaluar la salud mental y aportar perfiles psicológicos clave para resolver casos.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- SECCIÓN CENTRO DE RECURSOS -->
+        <section id="centro-recursos" class="section-recursos">
+            <div class="page-header">
+                <h1>Centro de Recursos</h1>
+                <p style="color: white;">Accede a nuestros materiales de investigación criminal para ampliar tus conocimientos</p>
+            </div>
+            
+            <!-- Pestañas de niveles -->
+            <div class="level-tabs">
+                <button class="level-tab active" data-level="principiante">
+                    <i class="fas fa-seedling"></i> Guía para Principiantes
+                </button>
+                <button class="level-tab" data-level="intermedio">
+                    <i class="fas fa-user-graduate"></i> Nivel Intermedio
+                </button>
+                <button class="level-tab" data-level="profesional">
+                    <i class="fas fa-briefcase"></i> Investigadores Profesionales
+                </button>
+            </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Mostrar el contenido de principiantes por defecto
+                    document.getElementById('principiante-content').style.display = 'block';
+                    
+                    // Añadir event listeners a las pestañas
+                    const tabs = document.querySelectorAll('.level-tab');
+                    tabs.forEach(tab => {
+                        tab.addEventListener('click', function() {
+                            // Quitar la clase active de todas las pestañas
+                            tabs.forEach(t => t.classList.remove('active'));
+                            
+                            // Añadir la clase active a la pestaña clickeada
+                            this.classList.add('active');
+                            
+                            // Ocultar todos los contenidos
+                            const contents = document.querySelectorAll('.level-content');
+                            contents.forEach(content => {
+                                content.style.display = 'none';
+                            });
+                            
+                            // Mostrar el contenido correspondiente
+                            const level = this.getAttribute('data-level');
+                            document.getElementById(level + '-content').style.display = 'block';
+                        });
+                    });
+                });
+            </script>
+            
+            <!-- Contenido para principiantes -->
+            <div class="level-content" id="principiante-content" style="display: none;">
+                <!-- Sección de Videos para Principiantes -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-video"></i> Videos Introductorios</h2>
+                        <p>Conceptos básicos sobre investigación criminal</p>
+                    </div>
+                    
+                    <div class="resources-grid videos-grid">
+                        <div class="resource-card video-card">
+                            <div class="resource-info">
+                                <h3>Introducción a la Investigación Criminal</h3>
+                                <p class="resource-description">Conceptos básicos y fundamentos para principiantes</p>
+                                <a href="videos/Introducción a la Investigación Criminal.mp4" class="resource-link">Ver video</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card video-card">
+                            <div class="resource-info">
+                                <h3>Metodología Básica</h3>
+                                <p class="resource-description">Primeros pasos en la investigación</p>
+                                <a href="videos/Metodología Básica.mp4" class="resource-link">Ver video</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Sección de Documentos para Principiantes -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-file-alt"></i> Documentos para Principiantes</h2>
+                        <p>Guías introductorias y manuales básicos</p>
+                    </div>
+                    
+                    <div class="resources-grid documents-grid">
+                        <div class="resource-card document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h3>Introducción a la Investigación Criminal</h3>
+                                <p class="resource-description">Conceptos fundamentales de la investigación criminal</p>
+                                <a href="pdfs/introduccion a la investigacion criminal.pdf" class="resource-link">Descargar documento</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h3>Metodología Básica</h3>
+                                <p class="resource-description">Fundamentos metodológicos para la investigación criminal</p>
+                                <a href="pdfs/Metodologia Basica.pdf" class="resource-link">Descargar documento</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Contenido para nivel intermedio -->
+            <div class="level-content" id="intermedio-content" style="display: none;">
+                <!-- Sección de Videos para Intermedios -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-video"></i> Videos de Nivel Intermedio</h2>
+                        <p>Técnicas y procedimientos avanzados</p>
+                    </div>
+                    
+                    <div class="resources-grid videos-grid">
+                        <div class="resource-card video-card">
+                            <div class="resource-info">
+                                <h3>Técnicas de Interrogatorio</h3>
+                                <p class="resource-description">Métodos efectivos para obtener información</p>
+                                <a href="videos/Técnicas de Interrogatorio.mp4" class="resource-link">Ver video</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card video-card">
+                            <div class="resource-info">
+                                <h3>Análisis de Evidencia</h3>
+                                <p class="resource-description">Procedimientos para el manejo y análisis de pruebas</p>
+                                <a href="videos/Análisis de Evidencia.mp4" class="resource-link">Ver video</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Sección de Documentos para Intermedios -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-file-alt"></i> Documentos de Nivel Intermedio</h2>
+                        <p>Manuales técnicos y guías especializadas</p>
+                    </div>
+                    
+                    <div class="resources-grid documents-grid">
+                        <div class="resource-card document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h3>Manual de Criminalística</h3>
+                                <p class="resource-description">Técnicas y procedimientos de criminalística</p>
+                                <a href="pdfs/Manual de Criminalística.pdf" class="resource-link">Descargar documento</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Contenido para profesionales -->
+            <div class="level-content" id="profesional-content" style="display: none;">
+                <!-- Sección de Videos para Profesionales -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-video"></i> Videos para Profesionales</h2>
+                        <p>Contenido especializado y casos de estudio</p>
+                    </div>
+                    
+                    <div class="resources-grid videos-grid">
+                        <div class="resource-card video-card">
+                            <div class="resource-info">
+                                <h3>Ética en la Investigación</h3>
+                                <p class="resource-description">Dilemas éticos y mejores prácticas profesionales</p>
+                                <a href="videos/Ética en la Investigación.mp4" class="resource-link">Ver video</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Sección de Documentos para Profesionales -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-file-alt"></i> Documentos para Profesionales</h2>
+                        <p>Investigaciones, estudios de caso y literatura especializada</p>
+                    </div>
+                    
+                    <div class="resources-grid documents-grid">
+                        <div class="resource-card document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h3>Criminalística Avanzada</h3>
+                                <p class="resource-description">Técnicas avanzadas de investigación criminal</p>
+                                <a href="pdfs/Criminalistica avanzada.pdf" class="resource-link">Descargar documento</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SUGERENCIAS -->
+        <section id="sugerencias" class="section-sugerencias">
+            <div class="page-header">
+                <h1>Sugerencias y Comentarios</h1>
+                <p style="color: white;">Tu opinión es importante para nosotros. Comparte tus ideas para mejorar nuestro portal.</p>
+            </div>
+            
+            <section class="suggestions-form">
+                <form id="suggestionForm" action="https://formspree.io/f/mvgajblk" method="POST">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Nombre completo</label>
+                        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment-alt"></i> Tu sugerencia o comentario</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe tu sugerencia o comentario en detalle..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Enviar sugerencia
+                    </button>
+                </form>
+                
+                <div class="form-footer">
+                    <p><i class="fas fa-shield-alt"></i> Tu información es confidencial y solo se utilizará para responder a tu comentario.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
+                        <p>323 325 8043</p>
+                        <p>310 478 7881</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <p>laboratorio.criminalistica.2024@gmail.com</p>
+                        <p>andreshernandez198514@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-info">
+                        <p>Oficina 314 Centro Comercial parque del Hacha Villavicencio Meta</p>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Portal de Investigación Criminal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="nav-fix.js"></script>
+    <script src="particles.js"></script>
+    <script>
+        // Variable global para el script de scroll
+        let lastScrollTop = 0;
+        
+        // Script para manejar las pestañas de niveles
+        document.addEventListener('DOMContentLoaded', function() {
+            const levelTabs = document.querySelectorAll('.level-tab');
+            const levelContents = document.querySelectorAll('.level-content');
+            
+            // Ocultar todos los contenidos inicialmente
+            levelContents.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            levelTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remover clase active de todas las pestañas
+                    levelTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Agregar clase active a la pestaña clickeada
+                    this.classList.add('active');
+                    
+                    // Ocultar todos los contenidos
+                    levelContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Mostrar el contenido correspondiente
+                    const levelToShow = this.getAttribute('data-level');
+                    document.getElementById(`${levelToShow}-content`).style.display = 'block';
+                });
+            });
+        });
+        
+        // Agregar funcionalidad para reproducir videos
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoCards = document.querySelectorAll('.video-card');
+            
+            videoCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const videoLink = this.querySelector('.resource-link').getAttribute('href');
+                    if (videoLink && videoLink !== '#') {
+                        window.location.href = videoLink;
+                    }
+                });
+                
+                // Hacer que el cursor cambie a pointer cuando se pasa sobre la tarjeta
+                card.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body>
+</html>
